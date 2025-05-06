@@ -1,0 +1,129 @@
+body {
+  overflow-x: hidden;
+}
+.navbar-brand {
+  width: 50%;
+}
+#logo {
+  width: 64px;
+}
+.nav-link,
+.navbar-brand {
+  color: #034424;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: #07713c;
+}
+#jumbotron {
+  background-image: url("../assets/jumbotron.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+/* Styles for headings inside the jumbotron */
+#jumbotron h1,
+#jumbotron p {
+  color: white;
+  text-align: center;
+  -webkit-text-stroke: 1px #034424;
+  margin-bottom: -3px;
+}
+.crop-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.crop-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.crop-map {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Ratio 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.crop-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.caption-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3); /* optional for contrast */
+  transition: background 0.1s ease;
+}
+
+.crop-image:hover .caption-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #07713c;
+  color: white;
+  padding: 10px 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.stat-box {
+  text-align: center;
+  padding: 10px;
+  width: 100px;
+  margin: 5px;
+}
+
+.stat-icon {
+  font-size: 48px;
+  color: rgba(100, 100, 100, 0.6);
+  margin-bottom: 5px;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 5px 0;
+}
+
+.stat-label {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
